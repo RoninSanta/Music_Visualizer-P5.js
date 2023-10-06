@@ -1,7 +1,6 @@
-## Case study 3: Audio visualiser
+## Audio visualiser
 
-In this case study you will be completing a simple music visualisation
-program that contains three separate visualisations.
+In this project is a simple music visualisation program that contains 8 separate visualisations.
 
 To turn the sound into something that can be visualised p5.js provides
 a Fast Fourier Transform object. Take a look at its description in the
@@ -22,12 +21,7 @@ this case study together we have used the following methods.
   can specify `freq1` as a number or p5.js provides strings for common
   values such as “bass” and “treble”, and leave `freq2` empty.
 
-### Tasks
-
-Download the music visualiser project template from the bottom of this
-page and look over the code.
-
-#### Playback and fullscreen [2 marks]
+#### Playback and fullscreen
 
 In the `ControlsAndInput` constructor function (in the
 controlsAndInput.js file) complete `this.mousePressed()`.
@@ -41,7 +35,7 @@ controlsAndInput.js file) complete `this.mousePressed()`.
   window and fullscreen (check out the p5.js documentation on how to
   do this.)
 
-#### Visualisation menu [2 marks]
+#### Visualisation menu
 
 In the `ControlsAndInput` constructor function complete
 `this.menu()`. Write a `for` loop that iterates over the array stored
@@ -53,7 +47,7 @@ running. When complete it should look like the following:
 
 ![menu](https://www.doc.gold.ac.uk/~jfort010/ip/case-studies/music-vis/figures/menu.png)
 
-#### Spectrum analyser [4 marks]
+#### Spectrum analyser 
 
 Take a look at the `Spectrum()` constructor function. The fast Fourier
 transform analyse function (i.e. `p5.FFT.analyse()`) returns an array of
@@ -78,7 +72,7 @@ by the amplitude value for that frequency.
   are more green. The red channel doesn’t need to be mapped you can
   use the raw amplitude value.
 
-#### Needle plots [2 marks]
+#### Needle plots 
 
 The `Needles` constructor function draws a visualisation that displays
 volume values for 4 frequency bands: bass, mid-low, mid-high and
@@ -86,16 +80,6 @@ treble. When it is complete it looks like the image below:
 
 ![menu](https://www.doc.gold.ac.uk/~jfort010/ip/case-studies/music-vis/figures/needles.png)
 
-All the trigonometry has been done for you :)
 
 Within the needles.js file, complete the nested `for` loop in the
 `this.draw()` function.
-
-- Assign values to the `x`, `y`, `w` and `h` variables so the plot is
-  drawn at the right location and correct size.
-- On line 49 call the `this.ticks(centreX, bottomY, freqLabel)`
-  function correctly specifying the arguments. This will add the ticks
-  to the graph. The comments above the `ticks` function should help
-  you work out what each parameter does.
-- On line 54 call the `this.needle(energy, centreX, bottomY)`
-  function. Specifying the correct parameters.
